@@ -702,8 +702,11 @@
     .theme-icon{ width:16px; height:16px; }
     .hero{ padding:32px 0 0; }
     .hero-grid{ margin-bottom:28px; }
-    .hero-card{ grid-template-columns:1fr; }
-    .hero-card-photo{ border-right:none; border-bottom:1px solid var(--border); aspect-ratio:1/1; }
+    .hero-card{ grid-template-columns:1fr; align-items:stretch; }
+    .hero-card-photo{
+      border-right:none; border-bottom:1px solid var(--border);
+      aspect-ratio:1/1; align-self:auto; width:100%; height:auto;
+    }
     .hero-card-photo .hero-photo-fallback{ font-size:20px; }
     .hero-card-info{ padding:18px 16px; }
     h1.headline{ font-size:clamp(26px, 8vw, 32px); }
