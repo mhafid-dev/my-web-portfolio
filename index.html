@@ -342,7 +342,7 @@
     line-height:1;
     white-space:nowrap;
   }
-  .hero-card-role{ margin-top:6px; }
+  .hero-card-role{ margin-top:6px; font-size:14px; }
   .hero-card-social{ display:flex; flex-direction:row; gap:8px; margin-top:16px; }
   .hero-content{ display:flex; flex-direction:column; justify-content:center; min-width:0; }
   .hero-eyebrow{ margin-bottom:14px; }
@@ -376,8 +376,10 @@
     background:var(--accent);
     transition:width .1s ease-in-out;
   }
-  .hero-social-link:hover{ color:#FFFFFF; border-color:var(--accent); }
-  .hero-social-link:hover::before{ width:100%; }
+  .hero-social-link:hover,
+  .hero-social-link:active{ color:#FFFFFF; border-color:var(--accent); }
+  .hero-social-link:hover::before,
+  .hero-social-link:active::before{ width:100%; }
   .hero-social-icon{
     position:relative; z-index:1;
     width:26px; height:26px;
@@ -401,7 +403,8 @@
     -webkit-mask-position:center;
     mask-position:center;
   }
-  .hero-social-link:hover .icon-mask{ background-color:#FFFFFF; }
+  .hero-social-link:hover .icon-mask,
+  .hero-social-link:active .icon-mask{ background-color:#FFFFFF; }
   .link-row .icon-mask{ background-color:var(--accent); }
 
   /* ---------- PANEL GRID ---------- */
@@ -474,8 +477,10 @@
     background:var(--accent);
     transition:width .1s ease-in-out;
   }
-  .bracket-cta:hover{ color:#FFFFFF; border-color:var(--accent); }
-  .bracket-cta:hover::before{ width:100%; }
+  .bracket-cta:hover,
+  .bracket-cta:active{ color:#FFFFFF; border-color:var(--accent); }
+  .bracket-cta:hover::before,
+  .bracket-cta:active::before{ width:100%; }
   .bracket-cta-text{ position:relative; z-index:1; }
   .bracket-cta-arrow{
     position:relative; z-index:1;
@@ -493,7 +498,8 @@
     mask-position:center;
     transition:background-color .15s ease;
   }
-  .bracket-cta:hover .bracket-cta-arrow{ background-color:#FFFFFF; }
+  .bracket-cta:hover .bracket-cta-arrow,
+  .bracket-cta:active .bracket-cta-arrow{ background-color:#FFFFFF; }
 
 
   /* attention / contact panel */
@@ -508,7 +514,8 @@
     transition:background-size .3s ease;
   }
   .attn-item:last-child{ border-bottom:none; }
-  .attn-item:hover{ background-size:100% 100%; }
+  .attn-item:hover,
+  .attn-item:active{ background-size:100% 100%; }
   .attn-item::after{
     content:"";
     position:absolute; left:0; bottom:0;
@@ -516,7 +523,8 @@
     background:var(--accent);
     transition:width .3s ease;
   }
-  .attn-item:hover::after{ width:100%; }
+  .attn-item:hover::after,
+  .attn-item:active::after{ width:100%; }
   .attn-trigger{
     display:flex; align-items:center; gap:12px;
     width:100%; padding:12px 20px;
@@ -537,8 +545,8 @@
   :root[data-theme="dark"] .attn-icon-logo img.theme-light{ display:none; }
   :root[data-theme="dark"] .attn-icon-logo img.theme-dark{ display:block; }
   .attn-body{ flex:1; min-width:0; }
-  .attn-title{ font-size:12.5px; font-weight:700; }
-  .attn-sub{ font-size:11px; color:var(--text-muted); margin-top:2px; }
+  .attn-title{ font-size:14px; font-weight:700; }
+  .attn-sub{ font-size:12px; color:var(--text-muted); margin-top:2px; }
   .accordion-arrow{
     position:relative;
     width:12px; height:12px;
@@ -588,7 +596,8 @@
     transition:opacity .2s ease, background-size .3s ease;
   }
   .link-row-left{ display:flex; align-items:center; gap:10px; }
-  .link-row:hover{ background-size:100% 100%; }
+  .link-row:hover,
+  .link-row:active{ background-size:100% 100%; }
   .link-row::after{
     content:"";
     position:absolute; left:0; bottom:0;
@@ -596,7 +605,8 @@
     background:var(--accent);
     transition:width .3s ease;
   }
-  .link-row:hover::after{ width:100%; }
+  .link-row:hover::after,
+  .link-row:active::after{ width:100%; }
   .link-row:last-child{ border-right:none; }
   .link-row-text{
     font-size:14px; font-weight:600;
@@ -618,7 +628,8 @@
     mask-position:center;
     transition:transform .2s ease;
   }
-  .link-row:hover .link-row-arrow{ transform:translate(3px,-3px); }
+  .link-row:hover .link-row-arrow,
+  .link-row:active .link-row-arrow{ transform:translate(3px,-3px); }
 
   /* ---------- SKILLS PANEL (bottom, top routes style) ---------- */
   .routes-panel{ padding:0; }
@@ -635,7 +646,8 @@
     transition:background-size .3s ease;
   }
   .route-item:last-child{ border-bottom:none; }
-  .route-item:hover{ background-size:100% 100%; }
+  .route-item:hover,
+  .route-item:active{ background-size:100% 100%; }
   .route-item::after{
     content:"";
     position:absolute; left:0; bottom:0;
@@ -643,7 +655,8 @@
     background:var(--accent);
     transition:width .3s ease;
   }
-  .route-item:hover::after{ width:100%; }
+  .route-item:hover::after,
+  .route-item:active::after{ width:100%; }
   .route-left{ display:flex; align-items:center; gap:12px; min-width:0; }
   .route-icon{
     width:34px; height:34px; border-radius:0;
@@ -666,7 +679,7 @@
     -webkit-mask-position:center;
     mask-position:center;
   }
-  .route-name{ font-size:13px; font-weight:700; }
+  .route-name{ font-size:14px; font-weight:700; }
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -698,8 +711,8 @@
   /* ---------- MOBILE ---------- */
   @media (max-width: 640px){
     .wrap{ padding:0 18px; }
-    .theme-toggle{ bottom:14px; right:14px; width:36px; height:36px; }
-    .theme-icon{ width:16px; height:16px; }
+    .theme-toggle{ bottom:14px; right:14px; width:48px; height:48px; }
+    .theme-icon{ width:22px; height:22px; }
     .hero{ padding:32px 0 0; }
     .hero-grid{ margin-bottom:28px; }
     .hero-card{ grid-template-columns:1fr; align-items:stretch; }
@@ -726,7 +739,7 @@
     .link-list{ flex-direction:column; }
     .link-row{ border-right:none; border-bottom:1px solid var(--border); padding:18px 16px; }
     .link-row:last-child{ border-bottom:none; }
-    .footer-inner{ flex-direction:column; align-items:flex-start; gap:6px; }
+    .footer-inner{ padding-right:74px; }
   }
 </style>
 </head>
@@ -1050,6 +1063,9 @@
   (function(){
     window.scrollTo(0, 0);
     window.addEventListener('pageshow', function(){ window.scrollTo(0, 0); });
+
+    // enables :active styles on touch in iOS Safari
+    document.addEventListener('touchstart', function(){}, { passive: true });
 
     var loader = document.getElementById('pageLoader');
     if(loader){
