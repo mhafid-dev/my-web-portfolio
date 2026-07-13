@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Moh. Hafidz Randy H. | UI/UX Designer</title>
+<link rel="icon" type="image/svg+xml" href="assets/icons/icon-tab-browser.svg">
 <script>
 (function(){
   try{
@@ -39,6 +40,7 @@
     --error:#D6291F;
     --error-dim:rgba(214,41,31,.10);
     --border-hover:#C8C8C4;
+    --row-hover:#E7E7E3;
     --nav-bg:rgba(255,255,255,.88);
     --radius:6px;
     --radius-sm:4px;
@@ -62,6 +64,7 @@
     --error:#FF4433;
     --error-dim:rgba(255,68,51,.12);
     --border-hover:#3A3A40;
+    --row-hover:#222228;
     --nav-bg:rgba(10,10,12,.88);
   }
 
@@ -507,7 +510,7 @@
   .attn-item{
     position:relative;
     border-bottom:1px solid var(--border);
-    background-image:linear-gradient(var(--surface-2), var(--surface-2));
+    background-image:linear-gradient(var(--row-hover), var(--row-hover));
     background-repeat:no-repeat;
     background-position:left center;
     background-size:0% 100%;
@@ -589,7 +592,7 @@
     flex:1;
     padding:22px 20px;
     border-right:1px solid var(--border);
-    background-image:linear-gradient(var(--surface-2), var(--surface-2));
+    background-image:linear-gradient(var(--row-hover), var(--row-hover));
     background-repeat:no-repeat;
     background-position:left center;
     background-size:0% 100%;
@@ -639,7 +642,7 @@
     padding:14px 20px; border-radius:0;
     gap:16px;
     border-bottom:1px solid var(--border);
-    background-image:linear-gradient(var(--surface-2), var(--surface-2));
+    background-image:linear-gradient(var(--row-hover), var(--row-hover));
     background-repeat:no-repeat;
     background-position:left center;
     background-size:0% 100%;
@@ -706,6 +709,15 @@
     .subhead{ font-size:17px; }
     .panel-row{ gap:12px; }
     .bracket-row{ gap:12px; padding:16px; }
+    /* experience, skills, tools: no hover sweep on tablet/mobile */
+    .attn-item:hover,
+    .attn-item:active,
+    .route-item:hover,
+    .route-item:active{ background-size:0% 100%; }
+    .attn-item:hover::after,
+    .attn-item:active::after,
+    .route-item:hover::after,
+    .route-item:active::after{ width:0; }
   }
 
   /* ---------- MOBILE ---------- */

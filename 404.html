@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 // Not Found</title>
+<link rel="icon" type="image/svg+xml" href="assets/icons/icon-tab-browser.svg">
 <script>
 (function(){
   try{
@@ -26,6 +27,7 @@
     --text-secondary:#6E6E76;
     --text-muted:#A1A1A8;
     --accent:#E8362B;
+    --border-hover:#C8C8C4;
   }
   :root[data-theme="dark"]{
     --bg:#0A0A0C;
@@ -36,6 +38,7 @@
     --text-secondary:#8A8A90;
     --text-muted:#5A5A60;
     --accent:#FF3B30;
+    --border-hover:#3A3A40;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html, body{ height:100%; }
@@ -240,17 +243,30 @@
     overflow:hidden;
     transition:border-color .15s ease;
   }
-  .theme-toggle:hover{ border-color:var(--text-muted); }
+  .theme-toggle:hover{ border-color:var(--border-hover); }
   .theme-icon{
     position:absolute; top:50%; left:50%;
-    font-size:16px; line-height:1;
-    color:var(--text-primary);
+    width:18px; height:18px;
+    background-color:var(--text-primary);
+    -webkit-mask-image:var(--icon-src);
+    mask-image:var(--icon-src);
+    -webkit-mask-size:contain;
+    mask-size:contain;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-position:center;
+    mask-position:center;
     transition:opacity .25s ease, transform .25s ease;
   }
   .theme-icon.sun{ opacity:1; transform:translate(-50%,-50%) scale(1) rotate(0deg); }
   .theme-icon.moon{ opacity:0; transform:translate(-50%,-50%) scale(.4) rotate(-45deg); }
   :root[data-theme="dark"] .theme-icon.sun{ opacity:0; transform:translate(-50%,-50%) scale(.4) rotate(45deg); }
   :root[data-theme="dark"] .theme-icon.moon{ opacity:1; transform:translate(-50%,-50%) scale(1) rotate(0deg); }
+
+  @media (max-width: 640px){
+    .theme-toggle{ bottom:14px; right:14px; width:48px; height:48px; }
+    .theme-icon{ width:22px; height:22px; }
+  }
 
   @media (prefers-reduced-motion: reduce){
     .crt-stage.glitching,
@@ -283,8 +299,8 @@
   </main>
 
   <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false" aria-label="Toggle light / dark mode">
-    <span class="theme-icon sun">☀</span>
-    <span class="theme-icon moon">☾</span>
+    <span class="theme-icon sun" style="--icon-src:url('assets/icons/sun.svg')"></span>
+    <span class="theme-icon moon" style="--icon-src:url('assets/icons/moon.svg')"></span>
   </button>
 
   <script>
