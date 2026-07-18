@@ -356,6 +356,8 @@
         if(e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
         e.preventDefault();
         var href = cta.getAttribute('href');
+        // tell the home page to skip its loader on this internal navigation
+        try{ sessionStorage.setItem('skipLoader', '1'); }catch(err){}
         if(reduceMotion){
           window.location.href = href;
           return;
